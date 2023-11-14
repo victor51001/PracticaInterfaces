@@ -17,7 +17,6 @@ namespace Inicio_Y_Portal
         Desarrollador
     }
 
-    [Serializable]
     public class Empleado
     {
         

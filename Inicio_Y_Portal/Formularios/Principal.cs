@@ -1,4 +1,5 @@
 ﻿using Inicio_Y_Portal.Controladores;
+using Inicio_Y_Portal.Formularios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,7 @@ namespace Inicio_Y_Portal
     public partial class Principal : Form
     {
         public static List<string> cambios;
+        private Confirmacion frmconfirm;
 
         private ListadoProyectos frmListaP;
         private NuevoProyecto frmNuevoProyecto;
@@ -59,30 +61,33 @@ namespace Inicio_Y_Portal
 
         private void Principal_FormClosing(object sender, FormClosingEventArgs e)
         {
-            while (cambios.Count > 0)
+            frmconfirm.ShowDialog();
+            if (frmconfirm.ok)
             {
-                switch (cambios[0])
+                while (cambios.Count > 0)
                 {
-                    case "Empleado":
-                        ControladorEmpleado.escribirEmpleados();
-                        cambios.RemoveAt(0);
-                        break;
-                    case "Proyecto":
-                        ControladorProyecto.escribirProyectos();
-                        cambios.RemoveAt(0);
-                        break;
-                    case "Usuario":
-                        ControladorUsuario.escribirUsuarios();
-                        cambios.RemoveAt(0);
-                        break;
-                    /*case "Cliente":
-                        ControladorCliente.escribirCliente();
-                        gestiones.RemoveAt(0);
-                        break;*/
-                    //Falta acabar esta parte, acabar usuarios, confirmacion, clientes todo.
+                    switch (cambios[0])
+                    {
+                        case "Empleado":
+                            ControladorEmpleado.escribirEmpleados();
+                            cambios.RemoveAt(0);
+                            break;
+                        case "Proyecto":
+                            ControladorProyecto.escribirProyectos();
+                            cambios.RemoveAt(0);
+                            break;
+                        case "Usuario":
+                            ControladorUsuario.escribirUsuarios();
+                            cambios.RemoveAt(0);
+                            break;
+                            /*case "Cliente":
+                                ControladorCliente.escribirCliente();
+                                gestiones.RemoveAt(0);
+                                break;*/
+                            //Falta acabar esta parte, acabar usuarios, confirmacion, clientes todo.
+                    }
                 }
             }
-
         }
     }
 }

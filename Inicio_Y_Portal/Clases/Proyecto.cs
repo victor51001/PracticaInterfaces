@@ -14,7 +14,6 @@ namespace Inicio_Y_Portal
         Cancelado
     }
 
-    [Serializable]
     public class Proyecto
     {
         private int codigo;
