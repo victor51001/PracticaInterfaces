@@ -8,19 +8,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Inicio_Y_Portal
+namespace Inicio_Y_Portal.Formularios.Clientes
 {
-    public partial class CriteriosP : Form
+    public partial class CriteriosC : Form
     {
-        public CriteriosP()
+        public CriteriosC()
         {
             InitializeComponent();
         }
 
         public string ValorDevuelto { get; set; }
+        private void CriteriosC_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void bttnAceptar_Click(object sender, EventArgs e)
         {
-            ValorDevuelto = chklstbxCriterios.SelectedItems[0].ToString();
+            ValorDevuelto = chklstbxClientes.SelectedItems[0].ToString();
             Close();
         }
 
@@ -31,21 +36,21 @@ namespace Inicio_Y_Portal
         }
 
         private int lastCheckedIndex = -1;
-        private void chklstbxCriterios_ItemCheck(object sender, ItemCheckEventArgs e)
+        private void chklstbxClientes_ItemCheck(object sender, ItemCheckEventArgs e)
         {
             if (e.Index != lastCheckedIndex)
             {
                 if (lastCheckedIndex != -1)
                 {
-                    chklstbxCriterios.SetItemCheckState(lastCheckedIndex, CheckState.Unchecked);
+                    chklstbxClientes.SetItemCheckState(lastCheckedIndex, CheckState.Unchecked);
                 }
                 lastCheckedIndex = e.Index;
             }
         }
 
-        private void chklstbxCriterios_SelectedIndexChanged(object sender, EventArgs e)
+        private void chklstbxClientes_SelectedIndexChanged(object sender, EventArgs e)
         {
-            bttnAceptar.Enabled = chklstbxCriterios.SelectedItems.Count > 0;
+            bttnAceptar.Enabled = chklstbxClientes.SelectedItems.Count > 0;
         }
     }
 }

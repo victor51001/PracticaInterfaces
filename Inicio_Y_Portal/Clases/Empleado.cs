@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO;
-using System.Xml.Serialization;
+﻿using Inicio_Y_Portal.Controladores;
+using System;
 
 namespace Inicio_Y_Portal
 {
@@ -18,9 +13,7 @@ namespace Inicio_Y_Portal
     }
 
     public class Empleado
-    {
-        
-        public static int proximoId = 1200;
+    {        
         private int id;
         private string dni;
         private string nombre;
@@ -60,8 +53,8 @@ namespace Inicio_Y_Portal
             string correo, DateTime fechaNacimiento, 
             int numeroSeguridadSocial, string comentarios)
         {
-            Id = proximoId;
-            proximoId++;
+            Id = ControladorEmpleado.proximoId;
+            ControladorEmpleado.proximoId++;
             DNI = dni;
             Nombre = nombre;
             Apellido1 = apellido1;
@@ -83,8 +76,8 @@ namespace Inicio_Y_Portal
             int numeroSeguridadSocial)
         {
             DNI = dni;
-            Id = proximoId;
-            proximoId++;
+            Id = ControladorEmpleado.proximoId;
+            ControladorEmpleado.proximoId++;
             Nombre = nombre;
             Apellido1 = apellido1;
             Apellido2 = apellido2;

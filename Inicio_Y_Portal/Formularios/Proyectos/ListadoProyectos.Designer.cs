@@ -114,7 +114,6 @@
             this.Controls.Add(this.lblTitulo);
             this.Name = "ListadoProyectos";
             this.Text = "Proyectos";
-            this.Load += new System.EventHandler(this.FrmProyectos_Load);
             this.ResumeLayout(false);
 
         }

@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Inicio_Y_Portal.Clases;
+using Inicio_Y_Portal.Controladores;
+using System;
 
 namespace Inicio_Y_Portal
 {
@@ -17,7 +15,6 @@ namespace Inicio_Y_Portal
     public class Proyecto
     {
         private int codigo;
-        public static int ultimoCodigo = 1;
         private string descripción;
         private DateTime fechaInicio;
         private DateTime fechaFin;
@@ -25,6 +22,7 @@ namespace Inicio_Y_Portal
         private int presupuestoInicial;
         private int presupuestoActual;
         private int cambios;
+        private Cliente cliente;
         private int codigoCliente;
 
         public int Codigo { get => codigo; set => codigo = value; }
@@ -35,16 +33,17 @@ namespace Inicio_Y_Portal
         public int PresupuestoInicial { get => presupuestoInicial; set => presupuestoInicial = value; }
         public int PresupuestoActual { get => presupuestoActual; set => presupuestoActual = value; }
         public int Cambios { get => cambios; set => cambios = value; }
+        public Cliente Cliente { get => cliente; set => cliente = value; }
         public int CodigoCliente { get => codigoCliente; set => codigoCliente = value; }
 
         public Proyecto(
             string descripción,
             DateTime fechaFin,
-            int presupuestoInicial,
-            int codigoCliente
+            int presupuestoInicial, Cliente client
             )
         {
-            Codigo = ultimoCodigo++;
+            Codigo = ControladorProyecto.ultimoCodigo;
+            ControladorProyecto.ultimoCodigo++;
             Descripción = descripción;
             FechaInicio = DateTime.Now;
             FechaFin = fechaFin;
@@ -52,7 +51,8 @@ namespace Inicio_Y_Portal
             PresupuestoInicial = presupuestoInicial;
             PresupuestoActual = presupuestoInicial;
             Cambios = 0;
-            CodigoCliente = codigoCliente;
+            Cliente = client;
+            CodigoCliente = client.Codigo;
         }     
     }
 }

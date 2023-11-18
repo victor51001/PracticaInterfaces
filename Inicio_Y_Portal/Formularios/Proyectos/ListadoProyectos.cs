@@ -29,46 +29,37 @@ namespace Inicio_Y_Portal
 
         private void bttnImprimir_Click(object sender, EventArgs e)
         {
-            mostrarProyectos();
+            MostrarProyectos();
         }
 
-        private void cargarProyectos()
+        private void CrearCheckBox(Proyecto proyecto, int posicion, int contadorNombre)
         {
-            ControladorProyecto.ListaProyectos.Add(new Proyecto("WEB 1.0 PARA TÉCNICAS REUNIDAS", DateTime.Parse("30/12/2031"), 50000, 11));
-            ControladorProyecto.ListaProyectos.Add(new Proyecto("APLICACIÓN CONTABLE PARA TÉCNICAS REUNIDAS", DateTime.Parse("12/01/2025"), 4000, 11));
-            ControladorProyecto.ListaProyectos.Add(new Proyecto("WEB 1.0 PARA AXA", DateTime.Parse("04/05/2028"), 30000, 21));
-            ControladorProyecto.ListaProyectos.Add(new Proyecto("WEB 3.0 PARA SANTANDER", DateTime.Parse("08/11/2029"), 22000, 52));
-            ControladorProyecto.ListaProyectos.Add(new Proyecto("APLICACIÓN MÓVIL SELENIUM", DateTime.Parse("28/09/2035"), 98000, 06));
-        }
-        private void crearCheckBox(Proyecto proyecto, int posicion, int contadorNombre)
-        {
-            CheckBox chkProyecto = new CheckBox();
-            chkProyecto.AutoSize = true;
-            chkProyecto.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular);
-            chkProyecto.Location = new Point(75, posicion);
-            chkProyecto.Name = "chkProyecto" + contadorNombre;
-            chkProyecto.Size = new Size(291, 20);
-            chkProyecto.TabIndex = 1;
-            chkProyecto.Text = proyecto.Descripción;
+            CheckBox chkProyecto = new CheckBox
+            {
+                AutoSize = true,
+                Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular),
+                Location = new Point(75, posicion),
+                Name = "chkProyecto" + contadorNombre,
+                Size = new Size(291, 20),
+                Tag = proyecto,
+                TabIndex = 1,
+                Text = proyecto.Descripción
+            };
             gpbxProyectos.Controls.Add(chkProyecto);
         }
 
-        private void mostrarProyectos()
+        private void MostrarProyectos()
         {
             gpbxProyectos.Controls.Clear();
             int posicion = 40, contador = 1;
             foreach (Proyecto p in ControladorProyecto.ListaProyectos)
             {
-                crearCheckBox(p, posicion, contador);
+                CrearCheckBox(p, posicion, contador);
                 posicion += 30;
                 contador++;
             }
         }
 
-        private void FrmProyectos_Load(object sender, EventArgs e)
-        {
-            cargarProyectos();
-        }
         int CriterioCodigo(Proyecto p1, Proyecto p2)
         {
             if (p1.Codigo == p2.Codigo)
@@ -130,12 +121,9 @@ namespace Inicio_Y_Portal
             else
                 return -1;
         }
-        private void bttnOrdenar_Click(object sender, EventArgs e)
+        private void OrdenarClientes(string valor)
         {
-            CriteriosP frm = new CriteriosP();
-            frm.ShowDialog();
-            string valor;
-            if ((valor=frm.ValorDevuelto)!=null)
+            if (valor != null)
             {
                 switch (valor)
                 {
@@ -167,9 +155,14 @@ namespace Inicio_Y_Portal
                         ControladorProyecto.ListaProyectos.Sort(CriterioCodigoCliente);
                         break;
                 }
-
-                mostrarProyectos();
+                MostrarProyectos();
             }
+        }
+        private void bttnOrdenar_Click(object sender, EventArgs e)
+        {
+            CriteriosP frm = new CriteriosP();
+            frm.ShowDialog();
+            OrdenarClientes(frm.ValorDevuelto);
         }
 
         private void bttnCancelar_Click(object sender, EventArgs e)
@@ -185,20 +178,18 @@ namespace Inicio_Y_Portal
                 {
                     if (control.Checked)
                     {
-                        Proyecto p = null;
-                        string descripcion = control.Text;
+                        Proyecto p = (Proyecto)control.Tag;
                         foreach (Proyecto pr in ControladorProyecto.ListaProyectos)
                         {
-                            if (pr.Descripción.Equals(descripcion))
+                            if (p.Equals(pr))
                             {
-                                p = pr;
+                                gpbxProyectos.Controls.Remove(control);
+                                ControladorProyecto.ListaProyectos.Remove(p);
                             }
                         }
-                        gpbxProyectos.Controls.Remove(control);
-                        ControladorProyecto.ListaProyectos.Remove(p);
                     }
                 }
-                mostrarProyectos();
+                MostrarProyectos();
             }
         }
 

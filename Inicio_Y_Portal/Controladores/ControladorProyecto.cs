@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Text.Json;
-using System.Threading.Tasks;
 
 namespace Inicio_Y_Portal.Controladores
 {
     public class ControladorProyecto
     {
         public static List<Proyecto> ListaProyectos = new List<Proyecto>();
-        public static void leerProyecto()
+        public static int ultimoCodigo = 1;
+        public static void LeerProyecto()
         {
             try
             {
@@ -21,10 +19,10 @@ namespace Inicio_Y_Portal.Controladores
                     ListaProyectos = JsonSerializer.Deserialize<List<Proyecto>>(jsonString);
                 }
             }
-            catch (Exception ex) {}
+            catch (Exception) { }
         }
 
-        public static void escribirProyectos()
+        public static void EscribirProyectos()
         {
             try
             {
@@ -34,7 +32,7 @@ namespace Inicio_Y_Portal.Controladores
                     File.WriteAllText("proyecto.json", jsonString);
                 }
             }
-            catch (Exception ex) {}
+            catch (Exception) { }
         }
     }
 }

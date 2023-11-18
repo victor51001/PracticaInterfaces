@@ -1,18 +1,14 @@
-﻿using Inicio_Y_Portal.Formularios.Usuarios;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Runtime.Serialization.Formatters.Binary;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Inicio_Y_Portal.Controladores
 {
     public class ControladorUsuario
     {
-        public static List<Usuario> ListaUsuarios;
-        public static void leerUsuarios()
+        public static List<Usuario> ListaUsuarios = new List<Usuario>();
+        public static void LeerUsuarios()
         {
             try
             {
@@ -21,10 +17,10 @@ namespace Inicio_Y_Portal.Controladores
                 ControladorUsuario.ListaUsuarios = (List<Usuario>)deserializer.Deserialize(OpenFileStream);
                 OpenFileStream.Close();
             }
-            catch (Exception e)
+            catch (Exception)
             { }
         }
-        public static void escribirUsuarios()
+        public static void EscribirUsuarios()
         {
             try
             {
@@ -33,7 +29,7 @@ namespace Inicio_Y_Portal.Controladores
                 serializer.Serialize(SaveFileStream, ListaUsuarios);
                 SaveFileStream.Close();
             }
-            catch (Exception e)
+            catch (Exception)
             { }
         }
     }

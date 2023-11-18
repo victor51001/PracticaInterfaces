@@ -34,12 +34,13 @@
             this.bttnOrdenar = new System.Windows.Forms.Button();
             this.bttnImprimir = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
+            this.bttnEliminar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // bttnFiltrar
             // 
             this.bttnFiltrar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.bttnFiltrar.Location = new System.Drawing.Point(449, 521);
+            this.bttnFiltrar.Location = new System.Drawing.Point(707, 521);
             this.bttnFiltrar.Name = "bttnFiltrar";
             this.bttnFiltrar.Size = new System.Drawing.Size(98, 32);
             this.bttnFiltrar.TabIndex = 12;
@@ -99,11 +100,23 @@
             this.lblTitulo.Text = "LISTADO EMPLEADOS";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // bttnEliminar
+            // 
+            this.bttnEliminar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.bttnEliminar.Location = new System.Drawing.Point(442, 521);
+            this.bttnEliminar.Name = "bttnEliminar";
+            this.bttnEliminar.Size = new System.Drawing.Size(98, 32);
+            this.bttnEliminar.TabIndex = 13;
+            this.bttnEliminar.Text = "Eliminar";
+            this.bttnEliminar.UseVisualStyleBackColor = true;
+            this.bttnEliminar.Click += new System.EventHandler(this.bttnEliminar_Click);
+            // 
             // ListadoEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(878, 698);
+            this.Controls.Add(this.bttnEliminar);
             this.Controls.Add(this.bttnFiltrar);
             this.Controls.Add(this.gpbxEmpleados);
             this.Controls.Add(this.bttnCancelar);
@@ -112,7 +125,6 @@
             this.Controls.Add(this.lblTitulo);
             this.Name = "ListadoEmpleados";
             this.Text = "Empleados";
-            this.Load += new System.EventHandler(this.ListadoEmpleados_Load);
             this.ResumeLayout(false);
 
         }
@@ -125,5 +137,6 @@
         private System.Windows.Forms.Button bttnOrdenar;
         private System.Windows.Forms.Button bttnImprimir;
         private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Button bttnEliminar;
     }
 }

@@ -82,6 +82,12 @@
     <Compile Include="Controladores\ControladorUsuario.cs" />
     <Compile Include="Controladores\ControladorProyecto.cs" />
     <Compile Include="Controladores\ControladorEmpleado.cs" />
+    <Compile Include="Formularios\Clientes\CriteriosC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Clientes\CriteriosC.Designer.cs">
+      <DependentUpon>CriteriosC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Clientes\ListadoClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +183,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\Clientes\CriteriosC.resx">
+      <DependentUpon>CriteriosC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Clientes\ListadoClientes.resx">
+      <DependentUpon>ListadoClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Empleados\CriteriosE.resx">
       <DependentUpon>CriteriosE.cs</DependentUpon>
     </EmbeddedResource>
@@ -227,6 +239,8 @@
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Empleado.datasource" />
+    <None Include="Properties\DataSources\Inicio_Y_Portal.Controladores.ControladorCliente.datasource" />
+    <None Include="Properties\DataSources\Inicio_Y_Portal.Controladores.ControladorEmpleado.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -240,6 +254,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

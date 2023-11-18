@@ -146,6 +146,10 @@
   <data name="lblDatos.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 14.25pt, style=Bold</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblDatos.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="lblDatos.Location" type="System.Drawing.Point, System.Drawing">
     <value>47, 47</value>
   </data>
@@ -175,6 +179,9 @@
   </data>
   <data name="lblDescripcion.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 11.25pt</value>
+  </data>
+  <data name="lblDescripcion.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="lblDescripcion.Location" type="System.Drawing.Point, System.Drawing">
     <value>55, 95</value>
@@ -206,6 +213,9 @@
   <data name="lblFecha.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 11.25pt</value>
   </data>
+  <data name="lblFecha.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="lblFecha.Location" type="System.Drawing.Point, System.Drawing">
     <value>55, 150</value>
   </data>
@@ -236,6 +246,9 @@
   <data name="lblPresupuestoInicial.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 11.25pt</value>
   </data>
+  <data name="lblPresupuestoInicial.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="lblPresupuestoInicial.Location" type="System.Drawing.Point, System.Drawing">
     <value>55, 202</value>
   </data>
@@ -265,6 +278,9 @@
   </data>
   <data name="lblCodigoCliente.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 11.25pt</value>
+  </data>
+  <data name="lblCodigoCliente.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="lblCodigoCliente.Location" type="System.Drawing.Point, System.Drawing">
     <value>55, 268</value>
@@ -311,6 +327,9 @@
   <data name="&gt;&gt;txtbxDescripcion.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="bttnAceptar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="bttnAceptar.Location" type="System.Drawing.Point, System.Drawing">
     <value>126, 353</value>
   </data>
@@ -334,6 +353,9 @@
   </data>
   <data name="&gt;&gt;bttnAceptar.ZOrder" xml:space="preserve">
     <value>4</value>
+  </data>
+  <data name="bttnCancelar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="bttnCancelar.Location" type="System.Drawing.Point, System.Drawing">
     <value>362, 353</value>
@@ -380,27 +402,36 @@
   <data name="&gt;&gt;nudPresupuesto.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="nudCodigoCliente.Location" type="System.Drawing.Point, System.Drawing">
-    <value>240, 265</value>
+  <metadata name="terminarAltaBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>468, 17</value>
+  </metadata>
+  <metadata name="controladorProyectoBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>228, 17</value>
+  </metadata>
+  <data name="cmbxCliente.Location" type="System.Drawing.Point, System.Drawing">
+    <value>240, 268</value>
   </data>
-  <data name="nudCodigoCliente.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 20</value>
+  <data name="cmbxCliente.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 21</value>
   </data>
-  <data name="nudCodigoCliente.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
+  <data name="cmbxCliente.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
   </data>
-  <data name="&gt;&gt;nudCodigoCliente.Name" xml:space="preserve">
-    <value>nudCodigoCliente</value>
+  <data name="&gt;&gt;cmbxCliente.Name" xml:space="preserve">
+    <value>cmbxCliente</value>
   </data>
-  <data name="&gt;&gt;nudCodigoCliente.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;cmbxCliente.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;nudCodigoCliente.Parent" xml:space="preserve">
+  <data name="&gt;&gt;cmbxCliente.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;nudCodigoCliente.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;cmbxCliente.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="nuevoProyectoBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -412,6 +443,24 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Nuevo Proyecto</value>
+  </data>
+  <data name="&gt;&gt;nuevoProyectoBindingSource.Name" xml:space="preserve">
+    <value>nuevoProyectoBindingSource</value>
+  </data>
+  <data name="&gt;&gt;nuevoProyectoBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;controladorProyectoBindingSource.Name" xml:space="preserve">
+    <value>controladorProyectoBindingSource</value>
+  </data>
+  <data name="&gt;&gt;controladorProyectoBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;terminarAltaBindingSource.Name" xml:space="preserve">
+    <value>terminarAltaBindingSource</value>
+  </data>
+  <data name="&gt;&gt;terminarAltaBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>NuevoProyecto</value>

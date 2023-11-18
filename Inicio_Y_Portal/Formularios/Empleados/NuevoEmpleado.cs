@@ -19,7 +19,7 @@ namespace Inicio_Y_Portal
             cbxPuestos.DataSource = Enum.GetValues(typeof(Puesto));
         }
 
-        private Boolean validarCampos()
+        private Boolean ValidarCampos()
         {
             Boolean validar = true;
             if (string.IsNullOrEmpty(txtbxDni.Text))
@@ -49,7 +49,7 @@ namespace Inicio_Y_Portal
             }
             return validar;
         }
-        private void limpiarCampos()
+        private void LimpiarCampos()
         {
             txtbxDni.Clear();
             txtbxNombre.Clear();
@@ -70,7 +70,7 @@ namespace Inicio_Y_Portal
 
         private void bttnAceptar_Click(object sender, EventArgs e)
         {
-            if (validarCampos())
+            if (ValidarCampos())
             {
                 Empleado em = new Empleado(
                     txtbxDni.Text.ToUpper(),
@@ -94,7 +94,7 @@ namespace Inicio_Y_Portal
                     em.Comentarios = txtbxComentarios.Text;
                 }
                 ControladorEmpleado.ListaEmpleados.Add(em);
-                limpiarCampos();
+                LimpiarCampos();
                 TerminarAlta frmTAP = new TerminarAlta();
                 frmTAP.ShowDialog();
                 if (!frmTAP.valor)

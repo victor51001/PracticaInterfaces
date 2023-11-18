@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml.Serialization;
 
 namespace Inicio_Y_Portal.Controladores
@@ -11,7 +8,9 @@ namespace Inicio_Y_Portal.Controladores
     public class ControladorEmpleado
     {
         public static List<Empleado> ListaEmpleados = new List<Empleado>();
-        public static void leerEmpleados()
+        public static List<Empleado> listaVistaEmpleados = new List<Empleado>();
+        public static int proximoId = 1200;
+        public static void LeerEmpleados()
         {
             try
             {
@@ -22,10 +21,10 @@ namespace Inicio_Y_Portal.Controladores
                     ListaEmpleados = (List<Empleado>)serializer.Deserialize(reader);
                 }
             }
-            catch (Exception ex) {}
+            catch (Exception) { }
         }
 
-        public static void escribirEmpleados()
+        public static void EscribirEmpleados()
         {
             try
             {
@@ -37,7 +36,7 @@ namespace Inicio_Y_Portal.Controladores
                     serializer.Serialize(writer, ListaEmpleados, namespaces);
                 }
             }
-            catch (Exception ex) {}
+            catch (Exception) { }
         }
     }
 }

@@ -34,11 +34,11 @@ namespace Inicio_Y_Portal
 
         private void FrmRegistro_Load(object sender, EventArgs e)
         {
-            cargarUsuarios();
+            CargarUsuarios();
         }
 
 
-        private void cargarUsuarios()
+        private void CargarUsuarios()
         {
             ControladorUsuario.ListaUsuarios.Add(new Usuario("root", 1234));
             ControladorUsuario.ListaUsuarios.Add(new Usuario("Juan", 4321));
@@ -47,7 +47,7 @@ namespace Inicio_Y_Portal
             ControladorUsuario.ListaUsuarios.Add(new Usuario("javier", 2222));
             ControladorUsuario.ListaUsuarios.Add(new Usuario("jorge", 3333));
         }
-        private Boolean validaUsuario(String id, int clave)
+        private Boolean ValidaUsuario(String id, int clave)
         {
             int posicion = ControladorUsuario.ListaUsuarios.FindIndex(x => x.Id == id.ToLower());
             if (posicion != -1 && ControladorUsuario.ListaUsuarios[posicion].Clave == clave)
@@ -62,7 +62,7 @@ namespace Inicio_Y_Portal
 
         private void bttAceptar_Click(object sender, EventArgs e)
         {
-            Boolean ok = validaUsuario(txtbUsuario.Text, Int32.Parse(txtbClave.Text));
+            Boolean ok = ValidaUsuario(txtbUsuario.Text, Int32.Parse(txtbClave.Text));
             vueltas++;
             if (ok)
             {

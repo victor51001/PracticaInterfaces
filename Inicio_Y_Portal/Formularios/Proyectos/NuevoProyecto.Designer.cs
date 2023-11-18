@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NuevoProyecto));
             this.dtpFechaFin = new System.Windows.Forms.DateTimePicker();
             this.lblDatos = new System.Windows.Forms.Label();
@@ -39,9 +40,14 @@
             this.bttnAceptar = new System.Windows.Forms.Button();
             this.bttnCancelar = new System.Windows.Forms.Button();
             this.nudPresupuesto = new System.Windows.Forms.NumericUpDown();
-            this.nudCodigoCliente = new System.Windows.Forms.NumericUpDown();
+            this.cmbxCliente = new System.Windows.Forms.ComboBox();
+            this.nuevoProyectoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.controladorProyectoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.terminarAltaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.nudPresupuesto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudCodigoCliente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nuevoProyectoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.controladorProyectoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.terminarAltaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dtpFechaFin
@@ -101,10 +107,25 @@
             resources.ApplyResources(this.nudPresupuesto, "nudPresupuesto");
             this.nudPresupuesto.Name = "nudPresupuesto";
             // 
-            // nudCodigoCliente
+            // cmbxCliente
             // 
-            resources.ApplyResources(this.nudCodigoCliente, "nudCodigoCliente");
-            this.nudCodigoCliente.Name = "nudCodigoCliente";
+            this.cmbxCliente.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.terminarAltaBindingSource, "AutoScroll", true));
+            this.cmbxCliente.DataSource = this.controladorProyectoBindingSource;
+            this.cmbxCliente.FormattingEnabled = true;
+            resources.ApplyResources(this.cmbxCliente, "cmbxCliente");
+            this.cmbxCliente.Name = "cmbxCliente";
+            // 
+            // nuevoProyectoBindingSource
+            // 
+            this.nuevoProyectoBindingSource.DataSource = typeof(Inicio_Y_Portal.NuevoProyecto);
+            // 
+            // controladorProyectoBindingSource
+            // 
+            this.controladorProyectoBindingSource.DataSource = typeof(Inicio_Y_Portal.Controladores.ControladorProyecto);
+            // 
+            // terminarAltaBindingSource
+            // 
+            this.terminarAltaBindingSource.DataSource = typeof(Inicio_Y_Portal.TerminarAlta);
             // 
             // NuevoProyecto
             // 
@@ -113,7 +134,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
             this.CancelButton = this.bttnCancelar;
-            this.Controls.Add(this.nudCodigoCliente);
+            this.Controls.Add(this.cmbxCliente);
             this.Controls.Add(this.nudPresupuesto);
             this.Controls.Add(this.dtpFechaFin);
             this.Controls.Add(this.bttnCancelar);
@@ -125,8 +146,11 @@
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.lblDatos);
             this.Name = "NuevoProyecto";
+            this.Load += new System.EventHandler(this.NuevoProyecto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudPresupuesto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudCodigoCliente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nuevoProyectoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.controladorProyectoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.terminarAltaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -144,6 +168,9 @@
         private System.Windows.Forms.Button bttnCancelar;
         private System.Windows.Forms.DateTimePicker dtpFechaFin;
         private System.Windows.Forms.NumericUpDown nudPresupuesto;
-        private System.Windows.Forms.NumericUpDown nudCodigoCliente;
+        private System.Windows.Forms.ComboBox cmbxCliente;
+        private System.Windows.Forms.BindingSource nuevoProyectoBindingSource;
+        private System.Windows.Forms.BindingSource controladorProyectoBindingSource;
+        private System.Windows.Forms.BindingSource terminarAltaBindingSource;
     }
 }
