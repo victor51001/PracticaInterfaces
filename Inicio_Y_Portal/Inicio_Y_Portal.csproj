@@ -238,9 +238,33 @@
       <DependentUpon>TerminarAlta.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\CriteriosE.datasource" />
+    <None Include="Properties\DataSources\CriteriosP.datasource" />
     <None Include="Properties\DataSources\Empleado.datasource" />
+    <None Include="Properties\DataSources\FiltrosE.datasource" />
+    <None Include="Properties\DataSources\FrmRegistro.datasource" />
+    <None Include="Properties\DataSources\Inicio_Y_Portal.Clases.Cliente.datasource" />
     <None Include="Properties\DataSources\Inicio_Y_Portal.Controladores.ControladorCliente.datasource" />
     <None Include="Properties\DataSources\Inicio_Y_Portal.Controladores.ControladorEmpleado.datasource" />
+    <None Include="Properties\DataSources\Inicio_Y_Portal.Controladores.ControladorProyecto.datasource" />
+    <None Include="Properties\DataSources\Inicio_Y_Portal.Controladores.ControladorUsuario.datasource" />
+    <None Include="Properties\DataSources\Inicio_Y_Portal.Formularios.Clientes.CriteriosC.datasource" />
+    <None Include="Properties\DataSources\Inicio_Y_Portal.Formularios.Clientes.ListadoClientes.datasource" />
+    <None Include="Properties\DataSources\Inicio_Y_Portal.Formularios.Clientes.NuevoCliente.datasource" />
+    <None Include="Properties\DataSources\Inicio_Y_Portal.Formularios.Confirmacion.datasource" />
+    <None Include="Properties\DataSources\Inicio_Y_Portal.Formularios.Usuarios.ListadoUsuarios.datasource" />
+    <None Include="Properties\DataSources\Inicio_Y_Portal.Formularios.Usuarios.NuevoUsuario.datasource" />
+    <None Include="Properties\DataSources\Inicio_Y_Portal.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\Inicio_Y_Portal.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\ListadoEmpleados.datasource" />
+    <None Include="Properties\DataSources\ListadoProyectos.datasource" />
+    <None Include="Properties\DataSources\NuevoEmpleado.datasource" />
+    <None Include="Properties\DataSources\NuevoProyecto.datasource" />
+    <None Include="Properties\DataSources\Principal.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\Proyecto.datasource" />
+    <None Include="Properties\DataSources\TerminarAlta.datasource" />
+    <None Include="Properties\DataSources\Usuario.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
