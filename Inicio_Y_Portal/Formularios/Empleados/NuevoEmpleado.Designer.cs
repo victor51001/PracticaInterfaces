@@ -356,6 +356,7 @@
             this.Controls.Add(this.lblDatos);
             this.Name = "NuevoEmpleado";
             this.Text = "Alta Empleado";
+            this.Load += new System.EventHandler(this.NuevoEmpleado_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudTelefono)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudNumSegSoc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.empleadoBindingSource2)).EndInit();

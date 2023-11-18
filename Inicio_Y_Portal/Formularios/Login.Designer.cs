@@ -45,7 +45,6 @@
             this.lblUsuario.Size = new System.Drawing.Size(79, 19);
             this.lblUsuario.TabIndex = 0;
             this.lblUsuario.Text = "Usuario: ";
-            this.lblUsuario.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblClave
             // 
@@ -56,7 +55,6 @@
             this.lblClave.Size = new System.Drawing.Size(62, 19);
             this.lblClave.TabIndex = 1;
             this.lblClave.Text = "Clave: ";
-            this.lblClave.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // txtbUsuario
             // 

@@ -9,7 +9,8 @@ namespace Inicio_Y_Portal.Controladores
     {
         public static List<Proyecto> ListaProyectos = new List<Proyecto>();
         public static int ultimoCodigo = 1;
-        public static void LeerProyecto()
+        public static bool cambios;
+        public static void LeerProyectos()
         {
             try
             {
@@ -26,11 +27,8 @@ namespace Inicio_Y_Portal.Controladores
         {
             try
             {
-                if (File.Exists("proyecto.json"))
-                {
-                    string jsonString = JsonSerializer.Serialize(ListaProyectos);
-                    File.WriteAllText("proyecto.json", jsonString);
-                }
+                string jsonString = JsonSerializer.Serialize(ListaProyectos);
+                File.WriteAllText("proyecto.json", jsonString);
             }
             catch (Exception) { }
         }

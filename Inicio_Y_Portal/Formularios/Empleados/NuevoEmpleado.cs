@@ -94,6 +94,7 @@ namespace Inicio_Y_Portal
                     em.Comentarios = txtbxComentarios.Text;
                 }
                 ControladorEmpleado.ListaEmpleados.Add(em);
+                ControladorEmpleado.cambios = true;
                 LimpiarCampos();
                 TerminarAlta frmTAP = new TerminarAlta();
                 frmTAP.ShowDialog();
@@ -107,6 +108,14 @@ namespace Inicio_Y_Portal
         private void numeros_Validating(object sender, CancelEventArgs e)
         {
                 MessageBox.Show("Debes ingresar exactamente 9 dígitos numéricos.");
+        }
+
+        private void NuevoEmpleado_Load(object sender, EventArgs e)
+        {
+            nudTelefono.Controls[0].Visible = false;
+            nudTelefono.Controls[1].Visible = false;
+            nudNumSegSoc.Controls[0].Visible = false;
+            nudNumSegSoc.Controls[1].Visible = false;
         }
     }
 }

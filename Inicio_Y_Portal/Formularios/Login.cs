@@ -22,31 +22,11 @@ namespace Inicio_Y_Portal
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void FrmRegistro_Load(object sender, EventArgs e)
         {
-            CargarUsuarios();
+            ControladorUsuario.LeerUsuarios();
         }
 
-
-        private void CargarUsuarios()
-        {
-            ControladorUsuario.ListaUsuarios.Add(new Usuario("root", 1234));
-            ControladorUsuario.ListaUsuarios.Add(new Usuario("Juan", 4321));
-            ControladorUsuario.ListaUsuarios.Add(new Usuario("jaime", 4444));
-            ControladorUsuario.ListaUsuarios.Add(new Usuario("jose", 1111));
-            ControladorUsuario.ListaUsuarios.Add(new Usuario("javier", 2222));
-            ControladorUsuario.ListaUsuarios.Add(new Usuario("jorge", 3333));
-        }
         private Boolean ValidaUsuario(String id, int clave)
         {
             int posicion = ControladorUsuario.ListaUsuarios.FindIndex(x => x.Id == id.ToLower());

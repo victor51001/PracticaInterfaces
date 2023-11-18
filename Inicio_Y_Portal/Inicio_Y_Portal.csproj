@@ -189,6 +189,9 @@
     <EmbeddedResource Include="Formularios\Clientes\ListadoClientes.resx">
       <DependentUpon>ListadoClientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Clientes\NuevoCliente.resx">
+      <DependentUpon>NuevoCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Empleados\CriteriosE.resx">
       <DependentUpon>CriteriosE.cs</DependentUpon>
     </EmbeddedResource>

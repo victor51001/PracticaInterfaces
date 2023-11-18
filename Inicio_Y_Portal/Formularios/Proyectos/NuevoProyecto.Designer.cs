@@ -41,13 +41,13 @@
             this.bttnCancelar = new System.Windows.Forms.Button();
             this.nudPresupuesto = new System.Windows.Forms.NumericUpDown();
             this.cmbxCliente = new System.Windows.Forms.ComboBox();
-            this.nuevoProyectoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.controladorProyectoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.terminarAltaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.controladorProyectoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nuevoProyectoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.nudPresupuesto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nuevoProyectoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.controladorProyectoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.terminarAltaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.controladorProyectoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nuevoProyectoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dtpFechaFin
@@ -115,17 +115,17 @@
             resources.ApplyResources(this.cmbxCliente, "cmbxCliente");
             this.cmbxCliente.Name = "cmbxCliente";
             // 
-            // nuevoProyectoBindingSource
+            // terminarAltaBindingSource
             // 
-            this.nuevoProyectoBindingSource.DataSource = typeof(Inicio_Y_Portal.NuevoProyecto);
+            this.terminarAltaBindingSource.DataSource = typeof(Inicio_Y_Portal.TerminarAlta);
             // 
             // controladorProyectoBindingSource
             // 
             this.controladorProyectoBindingSource.DataSource = typeof(Inicio_Y_Portal.Controladores.ControladorProyecto);
             // 
-            // terminarAltaBindingSource
+            // nuevoProyectoBindingSource
             // 
-            this.terminarAltaBindingSource.DataSource = typeof(Inicio_Y_Portal.TerminarAlta);
+            this.nuevoProyectoBindingSource.DataSource = typeof(Inicio_Y_Portal.NuevoProyecto);
             // 
             // NuevoProyecto
             // 
@@ -148,9 +148,9 @@
             this.Name = "NuevoProyecto";
             this.Load += new System.EventHandler(this.NuevoProyecto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudPresupuesto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nuevoProyectoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.controladorProyectoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.terminarAltaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.controladorProyectoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nuevoProyectoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -10,6 +10,7 @@ namespace Inicio_Y_Portal.Controladores
         public static List<Empleado> ListaEmpleados = new List<Empleado>();
         public static List<Empleado> listaVistaEmpleados = new List<Empleado>();
         public static int proximoId = 1200;
+        public static bool cambios;
         public static void LeerEmpleados()
         {
             try
@@ -28,7 +29,7 @@ namespace Inicio_Y_Portal.Controladores
         {
             try
             {
-                using (var writer = new StreamWriter("usuarios.xml"))
+                using (var writer = new StreamWriter("empleados.xml"))
                 {
                     var namespaces = new XmlSerializerNamespaces();
                     namespaces.Add(string.Empty, string.Empty);

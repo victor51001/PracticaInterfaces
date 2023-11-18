@@ -11,6 +11,7 @@ namespace Inicio_Y_Portal.Controladores
     {
         public static List<Cliente> ListaClientes = new List<Cliente>();
         public static int ultimoCodigo = 1;
+        public static bool cambios;
         public static void LeerCliente()
         {
             try
@@ -31,14 +32,11 @@ namespace Inicio_Y_Portal.Controladores
         {
             try
             {
-                if (File.Exists("cliente.yml"))
-                {
-                    var serializer = new SerializerBuilder()
-                    .WithNamingConvention(CamelCaseNamingConvention.Instance)
-                    .Build();
-                    string yamlString = serializer.Serialize(ListaClientes);
-                    File.WriteAllText("cliente.yml", yamlString);
-                }
+                var serializer = new SerializerBuilder()
+                .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                .Build();
+                string yamlString = serializer.Serialize(ListaClientes);
+                File.WriteAllText("cliente.yml", yamlString);
             }
             catch (Exception) { }
         }

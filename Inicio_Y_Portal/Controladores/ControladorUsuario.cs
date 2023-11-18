@@ -8,13 +8,14 @@ namespace Inicio_Y_Portal.Controladores
     public class ControladorUsuario
     {
         public static List<Usuario> ListaUsuarios = new List<Usuario>();
+        public static bool cambios;
         public static void LeerUsuarios()
         {
             try
             {
                 Stream OpenFileStream = File.OpenRead("usuarios.bin");
                 BinaryFormatter deserializer = new BinaryFormatter();
-                ControladorUsuario.ListaUsuarios = (List<Usuario>)deserializer.Deserialize(OpenFileStream);
+                ListaUsuarios = (List<Usuario>)deserializer.Deserialize(OpenFileStream);
                 OpenFileStream.Close();
             }
             catch (Exception)
