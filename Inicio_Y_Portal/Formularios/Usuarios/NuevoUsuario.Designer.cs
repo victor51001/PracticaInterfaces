@@ -41,9 +41,10 @@
             // 
             this.bttnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.bttnCancelar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.bttnCancelar.Location = new System.Drawing.Point(418, 295);
+            this.bttnCancelar.Location = new System.Drawing.Point(557, 363);
+            this.bttnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bttnCancelar.Name = "bttnCancelar";
-            this.bttnCancelar.Size = new System.Drawing.Size(102, 30);
+            this.bttnCancelar.Size = new System.Drawing.Size(136, 37);
             this.bttnCancelar.TabIndex = 23;
             this.bttnCancelar.Text = "Cancelar";
             this.bttnCancelar.UseVisualStyleBackColor = true;
@@ -52,9 +53,10 @@
             // bttnAceptar
             // 
             this.bttnAceptar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.bttnAceptar.Location = new System.Drawing.Point(122, 295);
+            this.bttnAceptar.Location = new System.Drawing.Point(163, 363);
+            this.bttnAceptar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bttnAceptar.Name = "bttnAceptar";
-            this.bttnAceptar.Size = new System.Drawing.Size(102, 30);
+            this.bttnAceptar.Size = new System.Drawing.Size(136, 37);
             this.bttnAceptar.TabIndex = 22;
             this.bttnAceptar.Text = "Aceptar";
             this.bttnAceptar.UseVisualStyleBackColor = true;
@@ -62,9 +64,10 @@
             // 
             // txtbxNombre
             // 
-            this.txtbxNombre.Location = new System.Drawing.Point(351, 130);
+            this.txtbxNombre.Location = new System.Drawing.Point(468, 160);
+            this.txtbxNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtbxNombre.Name = "txtbxNombre";
-            this.txtbxNombre.Size = new System.Drawing.Size(150, 20);
+            this.txtbxNombre.Size = new System.Drawing.Size(199, 22);
             this.txtbxNombre.TabIndex = 21;
             // 
             // lblClave
@@ -72,7 +75,8 @@
             this.lblClave.AutoSize = true;
             this.lblClave.Font = new System.Drawing.Font("Arial", 11.25F);
             this.lblClave.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblClave.Location = new System.Drawing.Point(119, 216);
+            this.lblClave.Location = new System.Drawing.Point(159, 266);
+            this.lblClave.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblClave.Name = "lblClave";
             this.lblClave.Size = new System.Drawing.Size(116, 17);
             this.lblClave.TabIndex = 20;
@@ -83,7 +87,8 @@
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Arial", 11.25F);
             this.lblNombre.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblNombre.Location = new System.Drawing.Point(119, 135);
+            this.lblNombre.Location = new System.Drawing.Point(159, 166);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(138, 17);
             this.lblNombre.TabIndex = 17;
@@ -94,7 +99,8 @@
             this.lblDatos.AutoSize = true;
             this.lblDatos.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblDatos.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblDatos.Location = new System.Drawing.Point(110, 37);
+            this.lblDatos.Location = new System.Drawing.Point(147, 46);
+            this.lblDatos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDatos.Name = "lblDatos";
             this.lblDatos.Size = new System.Drawing.Size(369, 22);
             this.lblDatos.TabIndex = 16;
@@ -102,10 +108,11 @@
             // 
             // txtbxClave
             // 
-            this.txtbxClave.Location = new System.Drawing.Point(351, 213);
+            this.txtbxClave.Location = new System.Drawing.Point(468, 262);
+            this.txtbxClave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtbxClave.Name = "txtbxClave";
             this.txtbxClave.PasswordChar = '*';
-            this.txtbxClave.Size = new System.Drawing.Size(150, 20);
+            this.txtbxClave.Size = new System.Drawing.Size(199, 22);
             this.txtbxClave.TabIndex = 24;
             this.txtbxClave.UseSystemPasswordChar = true;
             this.txtbxClave.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtbxClave_KeyPress);
@@ -113,11 +120,11 @@
             // NuevoUsuario
             // 
             this.AcceptButton = this.bttnAceptar;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.CancelButton = this.bttnCancelar;
-            this.ClientSize = new System.Drawing.Size(622, 350);
+            this.ClientSize = new System.Drawing.Size(829, 431);
             this.Controls.Add(this.txtbxClave);
             this.Controls.Add(this.bttnCancelar);
             this.Controls.Add(this.bttnAceptar);
@@ -125,8 +132,10 @@
             this.Controls.Add(this.lblClave);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblDatos);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "NuevoUsuario";
             this.Text = "Nuevo Usuario";
+            this.Load += new System.EventHandler(this.NuevoUsuario_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

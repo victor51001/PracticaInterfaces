@@ -70,5 +70,10 @@ namespace Inicio_Y_Portal.Formularios.Usuarios
                 e.Handled = true;
             }
         }
+
+        private void NuevoUsuario_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
