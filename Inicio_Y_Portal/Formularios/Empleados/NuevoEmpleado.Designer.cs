@@ -103,6 +103,7 @@
             this.txtbxDni.Name = "txtbxDni";
             this.txtbxDni.Size = new System.Drawing.Size(150, 20);
             this.txtbxDni.TabIndex = 17;
+            this.txtbxDni.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtbxDni_KeyDown);
             // 
             // lblApellido2
             // 

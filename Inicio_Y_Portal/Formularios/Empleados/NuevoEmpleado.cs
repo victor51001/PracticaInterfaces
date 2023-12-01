@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Inicio_Y_Portal
 {
@@ -117,5 +118,21 @@ namespace Inicio_Y_Portal
             nudNumSegSoc.Controls[0].Visible = false;
             nudNumSegSoc.Controls[1].Visible = false;
         }
+
+        private void txtbxDni_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control == true)
+            {
+                switch (e.KeyCode)
+                {
+                    case Keys.C:
+                    case Keys.P:
+                    case Keys.X:
+                        e.Handled = true;
+                        txtbxDni.SelectionLength = 0;
+                        break;
+                }
+            }
+        }        
     }
 }
