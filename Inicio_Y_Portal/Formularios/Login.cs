@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
 using System.Data;
+using System.Diagnostics;
 using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
@@ -67,6 +68,20 @@ namespace Inicio_Y_Portal
         private void bttnCancelar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void lnklblCentro_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            string url = "https://site.educa.madrid.org/ies.elcanaveral.mostoles/";
+
+            try
+            {
+                Process.Start(url);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al abrir Firefox: " + ex.Message);
+            }
         }
     }
 }

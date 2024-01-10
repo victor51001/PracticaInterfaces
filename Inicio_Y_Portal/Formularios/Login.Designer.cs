@@ -34,6 +34,7 @@
             this.txtbClave = new System.Windows.Forms.TextBox();
             this.bttAceptar = new System.Windows.Forms.Button();
             this.bttnCancelar = new System.Windows.Forms.Button();
+            this.lnklblCentro = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // lblUsuario
@@ -94,6 +95,17 @@
             this.bttnCancelar.UseVisualStyleBackColor = true;
             this.bttnCancelar.Click += new System.EventHandler(this.bttnCancelar_Click);
             // 
+            // lnklblCentro
+            // 
+            this.lnklblCentro.AutoSize = true;
+            this.lnklblCentro.Location = new System.Drawing.Point(44, 324);
+            this.lnklblCentro.Name = "lnklblCentro";
+            this.lnklblCentro.Size = new System.Drawing.Size(55, 13);
+            this.lnklblCentro.TabIndex = 6;
+            this.lnklblCentro.TabStop = true;
+            this.lnklblCentro.Text = "AcercaDe";
+            this.lnklblCentro.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnklblCentro_LinkClicked);
+            // 
             // FrmRegistro
             // 
             this.AcceptButton = this.bttAceptar;
@@ -102,6 +114,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.CancelButton = this.bttnCancelar;
             this.ClientSize = new System.Drawing.Size(456, 398);
+            this.Controls.Add(this.lnklblCentro);
             this.Controls.Add(this.bttnCancelar);
             this.Controls.Add(this.bttAceptar);
             this.Controls.Add(this.txtbClave);
@@ -124,6 +137,7 @@
         private System.Windows.Forms.TextBox txtbClave;
         private System.Windows.Forms.Button bttAceptar;
         private System.Windows.Forms.Button bttnCancelar;
+        private System.Windows.Forms.LinkLabel lnklblCentro;
     }
 }
 
