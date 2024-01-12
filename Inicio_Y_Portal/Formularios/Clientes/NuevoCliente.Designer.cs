@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblAlta = new System.Windows.Forms.Label();
             this.tbcntrlAlta = new System.Windows.Forms.TabControl();
             this.tbpgGenerales = new System.Windows.Forms.TabPage();
@@ -48,7 +49,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.tbpgPrivados = new System.Windows.Forms.TabPage();
-            this.txtbxComentarios = new System.Windows.Forms.TextBox();
             this.lblComentarios = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.lblDescuento = new System.Windows.Forms.Label();
@@ -69,11 +69,16 @@
             this.prgsbrProgreso = new System.Windows.Forms.ProgressBar();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.rchtxtbxComentarios = new System.Windows.Forms.RichTextBox();
+            this.tmTemporizador = new System.Windows.Forms.Timer(this.components);
+            this.lstbxLista = new System.Windows.Forms.ListBox();
+            this.dudDominio = new System.Windows.Forms.DomainUpDown();
             this.tbcntrlAlta.SuspendLayout();
             this.tbpgGenerales.SuspendLayout();
             this.tbpgPrivados.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.grpbxTipo.SuspendLayout();
+            this.tbpgSector.SuspendLayout();
             this.tbpgLogo.SuspendLayout();
             this.tbpgCitas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -270,7 +275,7 @@
             // 
             // tbpgPrivados
             // 
-            this.tbpgPrivados.Controls.Add(this.txtbxComentarios);
+            this.tbpgPrivados.Controls.Add(this.rchtxtbxComentarios);
             this.tbpgPrivados.Controls.Add(this.lblComentarios);
             this.tbpgPrivados.Controls.Add(this.numericUpDown1);
             this.tbpgPrivados.Controls.Add(this.lblDescuento);
@@ -282,14 +287,6 @@
             this.tbpgPrivados.TabIndex = 2;
             this.tbpgPrivados.Text = "Datos Privados";
             this.tbpgPrivados.UseVisualStyleBackColor = true;
-            // 
-            // txtbxComentarios
-            // 
-            this.txtbxComentarios.Location = new System.Drawing.Point(187, 253);
-            this.txtbxComentarios.Multiline = true;
-            this.txtbxComentarios.Name = "txtbxComentarios";
-            this.txtbxComentarios.Size = new System.Drawing.Size(585, 124);
-            this.txtbxComentarios.TabIndex = 4;
             // 
             // lblComentarios
             // 
@@ -375,6 +372,8 @@
             // 
             // tbpgSector
             // 
+            this.tbpgSector.Controls.Add(this.dudDominio);
+            this.tbpgSector.Controls.Add(this.lstbxLista);
             this.tbpgSector.Location = new System.Drawing.Point(4, 22);
             this.tbpgSector.Name = "tbpgSector";
             this.tbpgSector.Padding = new System.Windows.Forms.Padding(3);
@@ -483,6 +482,34 @@
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 1;
             // 
+            // rchtxtbxComentarios
+            // 
+            this.rchtxtbxComentarios.Location = new System.Drawing.Point(180, 252);
+            this.rchtxtbxComentarios.Name = "rchtxtbxComentarios";
+            this.rchtxtbxComentarios.Size = new System.Drawing.Size(364, 132);
+            this.rchtxtbxComentarios.TabIndex = 4;
+            this.rchtxtbxComentarios.Text = "";
+            // 
+            // tmTemporizador
+            // 
+            this.tmTemporizador.Interval = 1000;
+            this.tmTemporizador.Tick += new System.EventHandler(this.tmTemporizador_Tick);
+            // 
+            // lstbxLista
+            // 
+            this.lstbxLista.FormattingEnabled = true;
+            this.lstbxLista.Location = new System.Drawing.Point(224, 84);
+            this.lstbxLista.Name = "lstbxLista";
+            this.lstbxLista.Size = new System.Drawing.Size(306, 186);
+            this.lstbxLista.TabIndex = 0;
+            // 
+            // dudDominio
+            // 
+            this.dudDominio.Location = new System.Drawing.Point(597, 97);
+            this.dudDominio.Name = "dudDominio";
+            this.dudDominio.Size = new System.Drawing.Size(120, 20);
+            this.dudDominio.TabIndex = 1;
+            // 
             // NuevoCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -505,6 +532,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.grpbxTipo.ResumeLayout(false);
             this.grpbxTipo.PerformLayout();
+            this.tbpgSector.ResumeLayout(false);
             this.tbpgLogo.ResumeLayout(false);
             this.tbpgLogo.PerformLayout();
             this.tbpgCitas.ResumeLayout(false);
@@ -549,7 +577,6 @@
         private System.Windows.Forms.Label lblComentarios;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label lblDescuento;
-        private System.Windows.Forms.TextBox txtbxComentarios;
         private System.Windows.Forms.Label lblLogo;
         private System.Windows.Forms.Button bttnArchivo;
         private System.Windows.Forms.TextBox textBox3;
@@ -557,5 +584,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.RichTextBox rchtxtbxComentarios;
+        private System.Windows.Forms.Timer tmTemporizador;
+        private System.Windows.Forms.DomainUpDown dudDominio;
+        private System.Windows.Forms.ListBox lstbxLista;
     }
 }
