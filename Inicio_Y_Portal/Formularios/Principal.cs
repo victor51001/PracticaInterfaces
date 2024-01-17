@@ -79,12 +79,12 @@ namespace Inicio_Y_Portal
 
         private void listadosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmNuevoCliente.ShowDialog();
+            frmListaC.ShowDialog();
         }
 
         private void altaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmListaC.ShowDialog();
+            frmNuevoCliente.ShowDialog();
         }
 
         private void Principal_FormClosing(object sender, FormClosingEventArgs e)

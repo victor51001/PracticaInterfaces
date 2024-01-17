@@ -49,6 +49,11 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.tbpgPrivados = new System.Windows.Forms.TabPage();
+            this.rchtxtbxComentarios = new System.Windows.Forms.RichTextBox();
+            this.cmsComentarios = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.fuenteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblComentarios = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.lblDescuento = new System.Windows.Forms.Label();
@@ -58,30 +63,30 @@
             this.rdbttnMediana = new System.Windows.Forms.RadioButton();
             this.tdbttnPequeña = new System.Windows.Forms.RadioButton();
             this.tbpgSector = new System.Windows.Forms.TabPage();
+            this.dudDominio = new System.Windows.Forms.DomainUpDown();
+            this.lstbxLista = new System.Windows.Forms.ListBox();
             this.tbpgLogo = new System.Windows.Forms.TabPage();
+            this.prgsbrProgreso = new System.Windows.Forms.ProgressBar();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.bttnArchivo = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.lblLogo = new System.Windows.Forms.Label();
             this.tbpgCitas = new System.Windows.Forms.TabPage();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.bttnAceptar = new System.Windows.Forms.Button();
             this.bttnCancelar = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.bttnArchivo = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.prgsbrProgreso = new System.Windows.Forms.ProgressBar();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.rchtxtbxComentarios = new System.Windows.Forms.RichTextBox();
             this.tmTemporizador = new System.Windows.Forms.Timer(this.components);
-            this.lstbxLista = new System.Windows.Forms.ListBox();
-            this.dudDominio = new System.Windows.Forms.DomainUpDown();
             this.tbcntrlAlta.SuspendLayout();
             this.tbpgGenerales.SuspendLayout();
             this.tbpgPrivados.SuspendLayout();
+            this.cmsComentarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.grpbxTipo.SuspendLayout();
             this.tbpgSector.SuspendLayout();
             this.tbpgLogo.SuspendLayout();
-            this.tbpgCitas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tbpgCitas.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblAlta
@@ -288,6 +293,42 @@
             this.tbpgPrivados.Text = "Datos Privados";
             this.tbpgPrivados.UseVisualStyleBackColor = true;
             // 
+            // rchtxtbxComentarios
+            // 
+            this.rchtxtbxComentarios.ContextMenuStrip = this.cmsComentarios;
+            this.rchtxtbxComentarios.Location = new System.Drawing.Point(180, 252);
+            this.rchtxtbxComentarios.Name = "rchtxtbxComentarios";
+            this.rchtxtbxComentarios.Size = new System.Drawing.Size(364, 132);
+            this.rchtxtbxComentarios.TabIndex = 4;
+            this.rchtxtbxComentarios.Text = "";
+            // 
+            // cmsComentarios
+            // 
+            this.cmsComentarios.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1,
+            this.fuenteToolStripMenuItem,
+            this.exportarToolStripMenuItem});
+            this.cmsComentarios.Name = "cmsComentarios";
+            this.cmsComentarios.Size = new System.Drawing.Size(119, 70);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(118, 22);
+            this.toolStripMenuItem1.Text = "Color";
+            // 
+            // fuenteToolStripMenuItem
+            // 
+            this.fuenteToolStripMenuItem.Name = "fuenteToolStripMenuItem";
+            this.fuenteToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.fuenteToolStripMenuItem.Text = "Fuente";
+            // 
+            // exportarToolStripMenuItem
+            // 
+            this.exportarToolStripMenuItem.Name = "exportarToolStripMenuItem";
+            this.exportarToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.exportarToolStripMenuItem.Text = "Exportar";
+            // 
             // lblComentarios
             // 
             this.lblComentarios.AutoSize = true;
@@ -382,6 +423,21 @@
             this.tbpgSector.Text = "Sector";
             this.tbpgSector.UseVisualStyleBackColor = true;
             // 
+            // dudDominio
+            // 
+            this.dudDominio.Location = new System.Drawing.Point(597, 97);
+            this.dudDominio.Name = "dudDominio";
+            this.dudDominio.Size = new System.Drawing.Size(120, 20);
+            this.dudDominio.TabIndex = 1;
+            // 
+            // lstbxLista
+            // 
+            this.lstbxLista.FormattingEnabled = true;
+            this.lstbxLista.Location = new System.Drawing.Point(114, 53);
+            this.lstbxLista.Name = "lstbxLista";
+            this.lstbxLista.Size = new System.Drawing.Size(306, 186);
+            this.lstbxLista.TabIndex = 0;
+            // 
             // tbpgLogo
             // 
             this.tbpgLogo.Controls.Add(this.prgsbrProgreso);
@@ -396,6 +452,38 @@
             this.tbpgLogo.TabIndex = 4;
             this.tbpgLogo.Text = "Logo";
             this.tbpgLogo.UseVisualStyleBackColor = true;
+            // 
+            // prgsbrProgreso
+            // 
+            this.prgsbrProgreso.Location = new System.Drawing.Point(175, 348);
+            this.prgsbrProgreso.Name = "prgsbrProgreso";
+            this.prgsbrProgreso.Size = new System.Drawing.Size(395, 26);
+            this.prgsbrProgreso.TabIndex = 4;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(180, 168);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(333, 164);
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
+            // bttnArchivo
+            // 
+            this.bttnArchivo.Font = new System.Drawing.Font("Calibri", 9.7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bttnArchivo.Location = new System.Drawing.Point(427, 127);
+            this.bttnArchivo.Name = "bttnArchivo";
+            this.bttnArchivo.Size = new System.Drawing.Size(57, 20);
+            this.bttnArchivo.TabIndex = 2;
+            this.bttnArchivo.Text = "...";
+            this.bttnArchivo.UseVisualStyleBackColor = true;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(182, 128);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(217, 20);
+            this.textBox3.TabIndex = 1;
             // 
             // lblLogo
             // 
@@ -418,6 +506,20 @@
             this.tbpgCitas.Text = "Citas";
             this.tbpgCitas.UseVisualStyleBackColor = true;
             // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.Location = new System.Drawing.Point(320, 145);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 1;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(320, 81);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.ShowUpDown = true;
+            this.dateTimePicker1.Size = new System.Drawing.Size(218, 20);
+            this.dateTimePicker1.TabIndex = 0;
+            // 
             // bttnAceptar
             // 
             this.bttnAceptar.Location = new System.Drawing.Point(134, 579);
@@ -436,79 +538,10 @@
             this.bttnCancelar.Text = "Cancelar";
             this.bttnCancelar.UseVisualStyleBackColor = true;
             // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(182, 128);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(217, 20);
-            this.textBox3.TabIndex = 1;
-            // 
-            // bttnArchivo
-            // 
-            this.bttnArchivo.Font = new System.Drawing.Font("Calibri", 9.7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bttnArchivo.Location = new System.Drawing.Point(427, 127);
-            this.bttnArchivo.Name = "bttnArchivo";
-            this.bttnArchivo.Size = new System.Drawing.Size(57, 20);
-            this.bttnArchivo.TabIndex = 2;
-            this.bttnArchivo.Text = "...";
-            this.bttnArchivo.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(180, 168);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(333, 164);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
-            // prgsbrProgreso
-            // 
-            this.prgsbrProgreso.Location = new System.Drawing.Point(175, 348);
-            this.prgsbrProgreso.Name = "prgsbrProgreso";
-            this.prgsbrProgreso.Size = new System.Drawing.Size(395, 26);
-            this.prgsbrProgreso.TabIndex = 4;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(320, 81);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.ShowUpDown = true;
-            this.dateTimePicker1.Size = new System.Drawing.Size(218, 20);
-            this.dateTimePicker1.TabIndex = 0;
-            // 
-            // monthCalendar1
-            // 
-            this.monthCalendar1.Location = new System.Drawing.Point(320, 145);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 1;
-            // 
-            // rchtxtbxComentarios
-            // 
-            this.rchtxtbxComentarios.Location = new System.Drawing.Point(180, 252);
-            this.rchtxtbxComentarios.Name = "rchtxtbxComentarios";
-            this.rchtxtbxComentarios.Size = new System.Drawing.Size(364, 132);
-            this.rchtxtbxComentarios.TabIndex = 4;
-            this.rchtxtbxComentarios.Text = "";
-            // 
             // tmTemporizador
             // 
             this.tmTemporizador.Interval = 1000;
             this.tmTemporizador.Tick += new System.EventHandler(this.tmTemporizador_Tick);
-            // 
-            // lstbxLista
-            // 
-            this.lstbxLista.FormattingEnabled = true;
-            this.lstbxLista.Location = new System.Drawing.Point(224, 84);
-            this.lstbxLista.Name = "lstbxLista";
-            this.lstbxLista.Size = new System.Drawing.Size(306, 186);
-            this.lstbxLista.TabIndex = 0;
-            // 
-            // dudDominio
-            // 
-            this.dudDominio.Location = new System.Drawing.Point(597, 97);
-            this.dudDominio.Name = "dudDominio";
-            this.dudDominio.Size = new System.Drawing.Size(120, 20);
-            this.dudDominio.TabIndex = 1;
             // 
             // NuevoCliente
             // 
@@ -523,20 +556,20 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "NuevoCliente";
             this.Text = "NuevoCliente";
-            this.Load += new System.EventHandler(this.NuevoCliente_Load);
             this.tbcntrlAlta.ResumeLayout(false);
             this.tbpgGenerales.ResumeLayout(false);
             this.tbpgGenerales.PerformLayout();
             this.tbpgPrivados.ResumeLayout(false);
             this.tbpgPrivados.PerformLayout();
+            this.cmsComentarios.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.grpbxTipo.ResumeLayout(false);
             this.grpbxTipo.PerformLayout();
             this.tbpgSector.ResumeLayout(false);
             this.tbpgLogo.ResumeLayout(false);
             this.tbpgLogo.PerformLayout();
-            this.tbpgCitas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tbpgCitas.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -588,5 +621,9 @@
         private System.Windows.Forms.Timer tmTemporizador;
         private System.Windows.Forms.DomainUpDown dudDominio;
         private System.Windows.Forms.ListBox lstbxLista;
+        private System.Windows.Forms.ContextMenuStrip cmsComentarios;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem fuenteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exportarToolStripMenuItem;
     }
 }

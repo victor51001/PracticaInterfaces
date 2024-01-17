@@ -1,4 +1,5 @@
 ﻿using Inicio_Y_Portal.Controladores;
+using Inicio_Y_Portal.Formularios.Usuarios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -7,6 +8,7 @@ using System.Data;
 using System.Diagnostics;
 using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,7 +27,13 @@ namespace Inicio_Y_Portal
 
         private void FrmRegistro_Load(object sender, EventArgs e)
         {
-            ControladorUsuario.LeerUsuarios();
+            if (File.Exists("ListadoUsuarios.bin"))
+                ControladorUsuario.LeerUsuarios();
+            else
+            {
+                ControladorUsuario.ListaUsuarios.Add(new Usuario("admin", 1234));
+                ControladorUsuario.EscribirUsuarios();
+            }
         }
 
         private Boolean ValidaUsuario(String id, int clave)
