@@ -67,9 +67,9 @@
             this.lstbxLista = new System.Windows.Forms.ListBox();
             this.tbpgLogo = new System.Windows.Forms.TabPage();
             this.prgsbrProgreso = new System.Windows.Forms.ProgressBar();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pctbxLogo = new System.Windows.Forms.PictureBox();
             this.bttnArchivo = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtbxLogo = new System.Windows.Forms.TextBox();
             this.lblLogo = new System.Windows.Forms.Label();
             this.tbpgCitas = new System.Windows.Forms.TabPage();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
@@ -77,6 +77,7 @@
             this.bttnAceptar = new System.Windows.Forms.Button();
             this.bttnCancelar = new System.Windows.Forms.Button();
             this.tmTemporizador = new System.Windows.Forms.Timer(this.components);
+            this.pfdLogo = new System.Windows.Forms.OpenFileDialog();
             this.tbcntrlAlta.SuspendLayout();
             this.tbpgGenerales.SuspendLayout();
             this.tbpgPrivados.SuspendLayout();
@@ -85,7 +86,7 @@
             this.grpbxTipo.SuspendLayout();
             this.tbpgSector.SuspendLayout();
             this.tbpgLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctbxLogo)).BeginInit();
             this.tbpgCitas.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -441,9 +442,9 @@
             // tbpgLogo
             // 
             this.tbpgLogo.Controls.Add(this.prgsbrProgreso);
-            this.tbpgLogo.Controls.Add(this.pictureBox1);
+            this.tbpgLogo.Controls.Add(this.pctbxLogo);
             this.tbpgLogo.Controls.Add(this.bttnArchivo);
-            this.tbpgLogo.Controls.Add(this.textBox3);
+            this.tbpgLogo.Controls.Add(this.txtbxLogo);
             this.tbpgLogo.Controls.Add(this.lblLogo);
             this.tbpgLogo.Location = new System.Drawing.Point(4, 22);
             this.tbpgLogo.Name = "tbpgLogo";
@@ -460,13 +461,13 @@
             this.prgsbrProgreso.Size = new System.Drawing.Size(395, 26);
             this.prgsbrProgreso.TabIndex = 4;
             // 
-            // pictureBox1
+            // pctbxLogo
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(180, 168);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(333, 164);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
+            this.pctbxLogo.Location = new System.Drawing.Point(180, 168);
+            this.pctbxLogo.Name = "pctbxLogo";
+            this.pctbxLogo.Size = new System.Drawing.Size(333, 164);
+            this.pctbxLogo.TabIndex = 3;
+            this.pctbxLogo.TabStop = false;
             // 
             // bttnArchivo
             // 
@@ -477,13 +478,14 @@
             this.bttnArchivo.TabIndex = 2;
             this.bttnArchivo.Text = "...";
             this.bttnArchivo.UseVisualStyleBackColor = true;
+            this.bttnArchivo.Click += new System.EventHandler(this.bttnArchivo_Click);
             // 
-            // textBox3
+            // txtbxLogo
             // 
-            this.textBox3.Location = new System.Drawing.Point(182, 128);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(217, 20);
-            this.textBox3.TabIndex = 1;
+            this.txtbxLogo.Location = new System.Drawing.Point(182, 128);
+            this.txtbxLogo.Name = "txtbxLogo";
+            this.txtbxLogo.Size = new System.Drawing.Size(217, 20);
+            this.txtbxLogo.TabIndex = 1;
             // 
             // lblLogo
             // 
@@ -540,8 +542,12 @@
             // 
             // tmTemporizador
             // 
-            this.tmTemporizador.Interval = 1000;
             this.tmTemporizador.Tick += new System.EventHandler(this.tmTemporizador_Tick);
+            // 
+            // pfdLogo
+            // 
+            this.pfdLogo.FileName = "openFileDialog1";
+            this.pfdLogo.InitialDirectory = "C:\\Users\\alumno\\source\\repos\\Inicio_Y_Portal\\Inicio_Y_Portal\\Logos";
             // 
             // NuevoCliente
             // 
@@ -568,7 +574,7 @@
             this.tbpgSector.ResumeLayout(false);
             this.tbpgLogo.ResumeLayout(false);
             this.tbpgLogo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctbxLogo)).EndInit();
             this.tbpgCitas.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -612,9 +618,9 @@
         private System.Windows.Forms.Label lblDescuento;
         private System.Windows.Forms.Label lblLogo;
         private System.Windows.Forms.Button bttnArchivo;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtbxLogo;
         private System.Windows.Forms.ProgressBar prgsbrProgreso;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pctbxLogo;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.RichTextBox rchtxtbxComentarios;
@@ -625,5 +631,6 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem fuenteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exportarToolStripMenuItem;
+        private System.Windows.Forms.OpenFileDialog pfdLogo;
     }
 }

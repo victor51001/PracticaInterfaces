@@ -13,13 +13,19 @@ namespace Inicio_Y_Portal.Formularios.Clientes
             InitializeComponent();
         }
 
-        private void NuevoCliente_Load(object sender, EventArgs e)
-        {
-        }
-
         private void tmTemporizador_Tick(object sender, EventArgs e)
         {
             prgsbrProgreso.PerformStep();
+        }
+
+        private void bttnArchivo_Click(object sender, EventArgs e)
+        {
+            if (pfdLogo.ShowDialog() == DialogResult.OK) {
+                var imagen = pfdLogo.FileName;
+                tmTemporizador.Start();
+                txtbxLogo.Text = imagen;
+                pctbxLogo.Image = Image.FromFile(imagen);
+            }
         }
     }
 }
