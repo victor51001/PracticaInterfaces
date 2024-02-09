@@ -97,6 +97,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\Cliente.cs" />
+    <Compile Include="Clases\ComponentesProyecto.cs" />
     <Compile Include="Controladores\ControladorCliente.cs" />
     <Compile Include="Controladores\ControladorUsuario.cs" />
     <Compile Include="Controladores\ControladorProyecto.cs" />
