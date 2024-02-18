@@ -1,0 +1,4 @@
+﻿CREATE TABLE Usuario (
+    Id NVARCHAR(255) PRIMARY KEY,
+    Clave INT NOT NULL
+);
